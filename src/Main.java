@@ -44,12 +44,16 @@ public class Main {
                     // закрываем текущую запись для новой записи
                     zout.closeEntry();
                 }
-                item.delete();
+                deleteFile(item);
             }
 
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private static void deleteFile(File item) {
+        item.delete();
     }
 
     private static void saveGame(int i, String s) {
